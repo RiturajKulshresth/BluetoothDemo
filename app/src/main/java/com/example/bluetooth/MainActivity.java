@@ -21,9 +21,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void turnBluetoothOff(View view){
         BA.disable();
+
         if(BA.isEnabled()) {
             Toast.makeText(getApplicationContext(), "Bluetooth could not be turned Off", Toast.LENGTH_LONG).show();
-        }else{
+        }if(!(BA.isEnabled())){
             Toast.makeText(getApplicationContext(), "Bluetooth turned Off", Toast.LENGTH_LONG).show();
 
         }
